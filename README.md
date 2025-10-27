@@ -2,6 +2,7 @@
 Programs &amp; assignments for Logic Building batch - C
 
 # Folder layout
+
 ```
 C_Programming/
 ├── Assignments
