@@ -1,21 +1,22 @@
-//Write a program which accepts number from user and display multiplication of factors
+//A program which accepts number from user and display multiplication of factors of that number
 
 #include<stdio.h>
 
-int MultiFact(int iNo)
+int MultiplicationOfFactors(int iNo)
 {
     int iCnt = 0;
+    int iBounds = 0;
+    int iProduct = 0;
 
-    for(iCnt = 1 ; iCnt < iNo / 2; iCnt++)
+    for(iCnt = 2 ,iProduct = 1, iBounds  = iNo / 2;iCnt <= iBounds; iCnt++)
     {
-        if(iCnt % 2 == 0)
+        if((iNo % iCnt) == 0)
         {
 
-            printf("%d",iCnt);
+            iProduct = iProduct * iCnt;
         }
     }
-    
-    
+    return iProduct;
 }
 
 int main()
@@ -26,9 +27,9 @@ int main()
     printf("Enter Number : ");
     scanf("%d",&iValue);
 
-    iRet = MultiFact(iValue);
+    iRet = MultiplicationOfFactors(iValue);
 
-    printf("%d",iRet);
+    printf("The Multiplication of Factors of number %d is %d \n",iValue,iRet);
 
     return 0;
 
