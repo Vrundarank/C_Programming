@@ -8,7 +8,10 @@ int FactDiff(int iNo)
     int iSum = 0;
     int iDiff = 0;
 
-    
+    if(iNo < 0)
+    {
+        iNo = -iNo;
+    }
     
     
     for(iCnt = 1;iCnt < iNo; iCnt++)
