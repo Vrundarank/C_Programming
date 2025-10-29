@@ -1,4 +1,4 @@
-//A program which accepts number from user and returnsummation of all its Non-factors
+//A program which accepts number from user and return summation of all its Non-factors
 
 #include<stdio.h>
 
@@ -7,7 +7,7 @@ int DisplaySumOfNonFactors(int iNo)
     int iCnt = 0;
     int iSum = 0;
 
-    for(iCnt = 2, iCnt = iSum)
+    for(iCnt = 1;iCnt < iNo; iCnt++)
     {
         if((iNo % iCnt) != 0)
         {
