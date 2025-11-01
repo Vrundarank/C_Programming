@@ -1,48 +1,47 @@
-// A Program which checks whether the number contains 0 Digit in it or Not 
 #include<stdio.h>
 
-
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//    Function Name:    Count
-//    Description:      It used to check number of occurance of digits less than 6 in the Number 
+//    Function Name:    CountOdd
+//    Description:      It is used to count odd digits of a number  
 //    Input:            Integer  
-//    Output:           Integer 
+//    Output:           Integer  
 //    Author:           Vrundarank Shivaji Parite
-//    Date:             01/11/2025
+//    Date:             02/11/2025
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
-int Count(int iNo)
+int CountOdd(int iNo)
 {
 	int iDigit = 0;
-    int iFreq = 0;
+	int iFrequency = 0;
 
+	if(iNo < 0)
+	{
+		iNo = -iNo;
+	}
 
 	while(iNo != 0)
 	{
 		iDigit = iNo % 10;
-		if(iDigit <= 6)
+		if(iDigit % 2 != 0)
 		{
-            iFreq = iFreq + 1;
+			iFrequency++;			
 		}
 		iNo = iNo / 10;
 	}
-    return iFreq;
-}
+	return iFrequency;
+}// time complexity: O(N)
 
 
 int main()
 {
 	int iValue = 0;
-    int iRet = 0;
 
 	printf("Enter a number: ");
 	scanf("%d", &iValue);
 
-	iRet = Count(iValue);
-
-    printf("%d\n", iRet);
+	printf("%d\n", CountOdd(iValue));
 
 	return 0;
 }
@@ -52,9 +51,10 @@ int main()
 //    Testcases successfully handled by the application
 //
 //    Input1: 2395        Output: 3
-//    Input2: 1018        Output: 3
-//    Input3: 9440        Output: 3
-//    Input4: 922432      Output: 5
-//    Input5: 2        	  Output: 1
+//    Input2: 1018        Output: 2
+//    Input3: -1018       Output: 2
+//    Input4: 9000        Output: 1
+//    Input5: 6969        Output: 4
+//    Input5: 0           Output: 0
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////
