@@ -54,7 +54,7 @@ int main()
 {
     char cValue = '\0';
     // Sir as per your problem 
-    /* here you told to declare a BOOL type var named bRet but as the program doenst need to return any 
+    /* here you told to declare a BOOL type var named bRet but as the program does'nt need to return any 
        value to the main from helper funtion named there was      
     */ 
     printf("Enter the Character : ");
