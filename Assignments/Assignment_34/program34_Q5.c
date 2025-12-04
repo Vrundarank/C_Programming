@@ -9,7 +9,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//    Function Name:    ChkSmall
+//    Function Name:    Display
 //    Description:      Accept character from user and print its ASCII value in decimal,
 //                      octal , Decimal and Hexadecimal Format.
 //    Input:            Character 
